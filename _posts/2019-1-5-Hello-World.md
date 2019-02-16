@@ -9,4 +9,4 @@ Despite the fact that word embeddings are an unsupervised training task, they te
 ## Word Embeddings
 Word embeddings arose out of a desire to more represent words numerically so that they could be more easily read by more complex models like neural networks. Thus, words were mapped to n-dimensional vector space that were based on the similarities of each word to each other. For instance, this can be seen when one looks at the most similar words (using cosine similarity between word vectors) in an embedding to the word "Stanford" - which unsurprisingly give words like "Harvard", "USC", and "Cal" (booo).
 
-![_config.yml]({{ site.baseurl }}/images/figure1a.png) ![_config.yml]({{ site.baseurl }}/images/figure1b.png)
+![_config.yml]({{ site.baseurl }}/images/figure1a.png) | ![_config.yml]({{ site.baseurl }}/images/figure1b.png)
