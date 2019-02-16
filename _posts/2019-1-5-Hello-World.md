@@ -16,3 +16,5 @@ Word embeddings arose out of a desire to somehow represent words numerically so 
 However, another useful characteristic of this vectorized representation is that the different relationships across words are still preserved in the multi-dimensional space. In other words, embeddings are able to capture similarities across a wide spectrum of characteristics (e.g. location, part-of-speech, synonym, etc). For example, if you were to focus on some "geographical" dimension, one could see parallels in how capital cities and countries relate to each other.
 
 ![_config.yml]({{ site.baseurl }}/images/figure2.png)
+
+The example on the left actually relevant in how bias can be encoded in these representations. 
