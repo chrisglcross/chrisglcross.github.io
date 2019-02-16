@@ -2,7 +2,7 @@
 layout: post
 title: Bias in Word Embeddings
 ---
-AI is supposed to separate human judgement as much as possible in order to 
+AI algorithms today are designed to mitigate human bias as much as possible. However, these same algorithms also tend to ironically capture some of the worst human biases that are reflected in the datasets that they are trained on.
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
 
