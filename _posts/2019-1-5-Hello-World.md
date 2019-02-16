@@ -9,12 +9,15 @@ Despite the fact that word embeddings are an unsupervised training task, they te
 ## Word Embeddings
 Word embeddings arose out of a desire to somehow represent words numerically so that they could be more easily read by more complex models like neural networks. Thus, words were mapped to n-dimensional vector space that were based on the similarities of each word to each other. For instance, this can be seen when one looks at the most similar words (using cosine similarity between word vectors) in an embedding to the word "Stanford" - which unsurprisingly give words like "Harvard", "USC", and "Cal" (booo).
 
-
 ![_config.yml]({{ site.baseurl }}/images/figure1a.png) | ![_config.yml]({{ site.baseurl }}/images/figure1b.png)
-
 
 However, another useful characteristic of this vectorized representation is that the different relationships across words are still preserved in the multi-dimensional space. In other words, embeddings are able to capture similarities across a wide spectrum of characteristics (e.g. location, part-of-speech, synonym, etc). For example, if you were to focus on some "geographical" dimension, one could see parallels in how capital cities and countries relate to each other.
 
 ![_config.yml]({{ site.baseurl }}/images/figure2.png)
 
-The example on the left actually relevant in how bias can be encoded in these representations. 
+The figure on the left is actually very relevant to how bias can be encoded in these representations. Using that figure as an example, one is able to take advantage of simple vector arithmetic for tasks like word analogies. 
+
+![_config.yml]({{ site.baseurl }}/images/figure3.png)
+
+Using the equation above, one is able to find equivalent pairings between two separate words based on their meanings.
+
