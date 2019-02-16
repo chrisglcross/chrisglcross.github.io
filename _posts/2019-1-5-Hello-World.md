@@ -9,6 +9,9 @@ Despite the fact that word embeddings are an unsupervised training task, they te
 ## Word Embeddings
 Word embeddings arose out of a desire to more represent words numerically so that they could be more easily read by more complex models like neural networks. Thus, words were mapped to n-dimensional vector space that were based on the similarities of each word to each other. For instance, this can be seen when one looks at the most similar words (using cosine similarity between word vectors) in an embedding to the word "Stanford" - which unsurprisingly give words like "Harvard", "USC", and "Cal" (booo).
 
+![an image alt text]({{ site.baseurl }}/figure1a.png)
+![an image alt text]({{ site.baseurl }}/figure1b.png)
+
 ![_config.yml]({{ site.baseurl }}/images/config.png)
 
 The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
