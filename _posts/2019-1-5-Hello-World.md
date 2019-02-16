@@ -15,9 +15,12 @@ However, another useful characteristic of this vectorized representation is that
 
 ![_config.yml]({{ site.baseurl }}/images/figure2.png)
 
-The figure on the left is actually very relevant to how bias can be encoded in these representations. Using that figure as an example, one is able to take advantage of simple vector arithmetic for tasks like word analogies. 
+The figure on the left is actually very relevant to how bias can be encoded in these representations. Using that figure as an example, one is able to take advantage of simple vector arithmetic for tasks like word analogies. Using the equation below, one is able to find equivalent pairings between two separate words (in this case, "man" and "woman") based on their meanings.
 
 ![_config.yml]({{ site.baseurl }}/images/figure3.png)
 
-Using the equation above, one is able to find equivalent pairings between two separate words based on their meanings.
+However, if one experiments with this general setup for a variety of different inputs, an glaring problem arises:
 
+![_config.yml]({{ site.baseurl }}/images/figure4.png)
+
+For some gender neutral words that should presumably be equivalent across genders (such as "programmer"), the analogous word that is outputted ("homemaker") represents a clear example of how one occupation could be inaccurately leaned towards a specific gender. It was this particular example that used in Bolukbasi's _Man is to Computer Programmer as Woman is to 58Homemaker?  Debiasing  Word  Embedding_, which highlighted this way of showing how word embeddings could represent the implicit sexism in a dataset
