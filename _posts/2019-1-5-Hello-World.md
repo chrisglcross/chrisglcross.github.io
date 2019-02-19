@@ -25,6 +25,7 @@ However, if one experiments with this general setup for a variety of different i
 
 For some gender neutral words that should presumably be equivalent across genders (such as "programmer"), the analogous word that is outputted ("homemaker") represents a clear example of how one occupation could lean towards a specific gender. It was this particular example that used in Bolukbasi's _Man is to Computer Programmer as Woman is to Homemaker?  Debiasing  Word  Embedding_, which highlighted this way of showing how word embeddings could represent the implicit sexism in a dataset
 
+## Debiasing Methods
 The paper was also seminal in introducing a potential method to fixing this problem, which involved modifying the vector space to eliminate this arbitrary "gender"-ing of words while still retaining the "gender"-ing of words in cases like "sister" and "brother" - where gender is important in the core definitions of these words. This "Neutralize and Equalize" technique essentially projected gender neutral words unto this identified gender subspace and maintained the positioning of gender-definitional pairs. Below is a plot that shows the gender divide between words in the Google News Word2Vec dataset using each word vector's cosine similarity to "he" and "she". The plot next to it shows the same word vector similarities after I applied Bolukbasi's debiasing method.
 
 ![_config.yml]({{ site.baseurl }}/images/figure5a.png) | ![_config.yml]({{ site.baseurl }}/images/figure5b.png)
