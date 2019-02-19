@@ -28,3 +28,7 @@ For some gender neutral words that should presumably be equivalent across gender
 The paper was also seminal in introducing a potential method to fixing this problem, which involved modifying the vector space to eliminate this arbitrary "gender"-ing of words while still retaining the "gender"-ing of words in cases like "sister" and "brother" - where gender is important in the core definitions of these words. This "Neutralize and Equalize" technique essentially projected gender neutral words unto this identified gender subspace and maintained the positioning of gender-definitional pairs. Below is a plot that shows the gender divide between words in the Google News Word2Vec dataset using each word vector's cosine similarity to "he" and "she". The plot next to it shows the same word vector similarities after I applied Bolukbasi's debiasing method.
 
 ![_config.yml]({{ site.baseurl }}/images/figure5a.png) | ![_config.yml]({{ site.baseurl }}/images/figure5b.png)
+
+The paper also introduced an alternative method to debiasing the word embeddings, instead redefining the problem as an optimization problem that sought to minimize the gender dimension of gender-neutral words while still maximizing this component for gender-definitional pairs. This method and its algorithm is outline here below:
+
+![_config.yml]({{ site.baseurl }}/images/figure6.png)
