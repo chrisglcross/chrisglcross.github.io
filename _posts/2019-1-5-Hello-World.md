@@ -13,6 +13,7 @@ Word embeddings arose out of a desire to somehow represent words numerically so 
 ![_config.yml]({{ site.baseurl }}/images/figure1a.png) | ![_config.yml]({{ site.baseurl }}/images/figure1b.png)
 
 ![_config.yml]
+
 However, another useful characteristic of this vectorized representation is that the different relationships across words are still preserved in the multi-dimensional space. In other words, embeddings are able to capture similarities across a wide spectrum of characteristics (e.g. location, part-of-speech, synonym, etc). For example, if you were to focus on some "geographical" dimension, one could see parallels in how capital cities and countries relate to each other.
  
  
