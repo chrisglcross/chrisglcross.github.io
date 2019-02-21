@@ -26,7 +26,7 @@ The figure on the left is actually very relevant to how bias can be encoded in t
 
 However, if one experiments with this general setup for a variety of different inputs, an glaring problem arises:
  
- &nbsp;
+&nbsp;
 ![_config.yml]({{ site.baseurl }}/images/figure4.png)
 &nbsp;
  
