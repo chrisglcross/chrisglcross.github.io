@@ -16,36 +16,26 @@ Word embeddings arose out of a desire to somehow represent words numerically so 
 
 However, another useful characteristic of this vectorized representation is that the different relationships across words are still preserved in the multi-dimensional space. In other words, embeddings are able to capture similarities across a wide spectrum of characteristics (e.g. location, part-of-speech, synonym, etc). For example, if you were to focus on some "geographical" dimension, one could see parallels in how capital cities and countries relate to each other.
  
- <br>
 ![_config.yml]({{ site.baseurl }}/images/figure2.png)
- <br>
  
 The figure on the left is actually very relevant to how bias can be encoded in these representations. Using that figure as an example, one is able to take advantage of simple vector arithmetic for tasks like word analogies. Using the equation below, one is able to find equivalent pairings between two separate words (in this case, "man" and "woman") based on their meanings.
  
- <br>
 ![_config.yml]({{ site.baseurl }}/images/figure3.png)
- <br>
  
 However, if one experiments with this general setup for a variety of different inputs, an glaring problem arises:
  
- <br>
 ![_config.yml]({{ site.baseurl }}/images/figure4.png)
- <br>
  
 For some gender neutral words that should presumably be equivalent across genders (such as "programmer"), the analogous word that is outputted ("homemaker") represents a clear example of how one occupation could lean towards a specific gender. It was this particular example that used in Bolukbasi's _Man is to Computer Programmer as Woman is to Homemaker?  Debiasing  Word  Embedding_, which highlighted this way of showing how word embeddings could represent the implicit sexism in a dataset
  
  
 ## Debiasing Methods
 The paper was also seminal in introducing a potential method to fixing this problem, which involved modifying the vector space to eliminate this arbitrary "gender"-ing of words while still retaining the "gender"-ing of words in cases like "sister" and "brother" - where gender is important in the core definitions of these words. This "Neutralize and Equalize" technique essentially projected gender neutral words unto this identified gender subspace and maintained the positioning of gender-definitional pairs. Below is a plot that shows the gender divide between words in the Google News Word2Vec dataset using each word vector's cosine similarity to "he" and "she". The plot was generated using the gender-definitional and gender-neutral examples given by the paper itself. The plot next to it shows the same word vector similarities after I applied Bolukbasi's debiasing method.
- 
- <br>
+
 ![_config.yml]({{ site.baseurl }}/images/figure5a.png) | ![_config.yml]({{ site.baseurl }}/images/figure5b.png)
- <br>
  
 The paper also introduced an alternative method to debiasing the word embeddings, instead redefining the problem as an optimization problem that sought to minimize the gender dimension of gender-neutral words while still maximizing this component for gender-definitional pairs. Using a langrangian method in order to find the optimal linear transformation, this "soft" debiasing algorithm serves as a rough equivalent to the aforementioned "hard" method. This method and its associated mathematical equation is outline here below:
  
-<br>
 ![_config.yml]({{ site.baseurl }}/images/figure6.png)
-<br>
  
 I've now introduced the topic surrounding bias in word embeddings a potential solution to this problem by Bolukbasi. In a following blog post, I will focus on two more alternative methods focused on adversarial training and pre-processing model adjustments made my researchers in the last year. 
